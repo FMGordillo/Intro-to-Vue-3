@@ -5,6 +5,7 @@ const app = Vue.createApp({
       description: "There are comfy",
       image: "/assets/images/socks_green.jpg",
       url: "/socks",
+      inventory: 100,
     };
   },
 });

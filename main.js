@@ -15,7 +15,9 @@ const app = Vue.createApp({
   },
   methods: {
     addToCart() {
-      this.cart += 1;
+      if (this.inStock) {
+        this.cart += 1;
+      }
     },
     removeFromCart() {
       if (this.cart - 1 >= 0) {

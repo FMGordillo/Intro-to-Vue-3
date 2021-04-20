@@ -12,4 +12,17 @@ const app = Vue.createApp({
       ],
     };
   },
+  methods: {
+    addToCart() {
+      this.cart += 1;
+    },
+    removeFromCart() {
+      if (this.cart - 1 >= 0) {
+        this.cart -= 1;
+      }
+    },
+    updateImage(image) {
+      this.image = image;
+    },
+  },
 });

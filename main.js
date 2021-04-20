@@ -4,6 +4,7 @@ const app = Vue.createApp({
       product: "Socks",
       description: "There are comfy",
       image: "/assets/images/socks_green.jpg",
+      url: "/socks",
     };
   },
 });

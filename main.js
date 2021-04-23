@@ -4,7 +4,7 @@ const app = Vue.createApp({
       cart: 0,
       product: "Socks",
       brand: "Vue Mastery",
-      selectedVariant: 0, // The index of the current hovered
+      selectedVariant: 0,
       details: ["50% cotton", "30% wool", "20% polyester"],
       variants: [
         {
@@ -24,14 +24,7 @@ const app = Vue.createApp({
   },
   methods: {
     addToCart() {
-      if (this.inStock) {
-        this.cart += 1;
-      }
-    },
-    removeFromCart() {
-      if (this.cart - 1 >= 0) {
-        this.cart -= 1;
-      }
+      this.cart += 1;
     },
     updateVariant(index) {
       this.selectedVariant = index;
@@ -45,8 +38,7 @@ const app = Vue.createApp({
       return this.variants[this.selectedVariant].image;
     },
     inStock() {
-      console.log(this.variants[this.selectedVariant].quantity);
-      return this.variants[this.selectedVariant].quantity > 0;
+      return this.variants[this.selectedVariant].image;
     },
   },
 });

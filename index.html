@@ -27,6 +27,7 @@
             <ul>
               <li v-for="detail in details">{{ detail }}</li>
             </ul>
+
             <div
               v-for="(variant, index) in variants"
               :key="variant.id"
@@ -34,20 +35,14 @@
               class="color-circle"
               :style="{ backgroundColor: variant.color }"
             ></div>
+
             <button
               class="button"
               :class="{ disabledButton: !inStock }"
               :disabled="!inStock"
-              @click="addToCart"
+              v-on:click="addToCart"
             >
               Add to Cart
-            </button>
-            <button
-              class="button"
-              :class="{ disabledButton: !inStock }"
-              @click="removeFromCart"
-            >
-              -
             </button>
           </div>
         </div>
